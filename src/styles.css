@@ -1,0 +1,54 @@
+/* Minimal prezentum-like clean style with white background, thin borders, large cards, generous spacing */
+:root {
+  --bg: #ffffff;
+  --fg: #0b0b0b;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #111827;
+  --radius: 14px;
+}
+
+html, body, #root { height: 100%; }
+body { background: var(--bg); color: var(--fg); }
+
+.container { max-width: 920px; margin: 0 auto; padding: 24px; }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+}
+
+.h1 { font-size: 42px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; }
+.h2 { font-size: 28px; line-height: 1.2; font-weight: 600; }
+.p  { font-size: 16px; line-height: 1.7; color: var(--muted); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 14px 18px; border-radius: 12px; border: 1px solid var(--border);
+  background: #111; color: #fff; font-weight: 600; letter-spacing: 0.01em;
+}
+.btn.secondary { background: #fff; color: #111; }
+
+.grid { display: grid; gap: 16px; }
+.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.input, .select, .checkbox {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.label { font-size: 14px; color: #374151; margin-bottom: 8px; display: block; }
+
+.divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+.badge { border: 1px solid var(--border); border-radius: 999px; padding: 8px 12px; font-weight: 600; }
+
+.hero-spline { width: 100%; height: 280px; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+
+.small { font-size: 14px; color: var(--muted); }
